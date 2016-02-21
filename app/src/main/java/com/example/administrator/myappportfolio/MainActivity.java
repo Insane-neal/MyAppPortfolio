@@ -25,24 +25,18 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ListView appListView = (ListView)this.findViewById(R.id.listView_app_portfolio);
+        //save all the hard coded strings in res/values/strings.xml
         String[] appNamesArray = {
-                "Sportify Streamer",
-                "Scores App",
-                "Library App",
-                "Build It Bigger",
-                "XYZ Reader",
-                "Capstone:My Own App"
+                getString(R.string.sportify_streamer),
+                getString(R.string.scores_app),
+                getString(R.string.library_app),
+                getString(R.string.build_it_bigger),
+                getString(R.string.xyz_reader),
+                getString(R.string.capstone_my_own_app)
         };
         List<String> appNames = Arrays.asList(appNamesArray);
         ListAdapter appNamesAdapter = new ListAdapter(this,appNames);
         appListView.setAdapter(appNamesAdapter);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
     }
 
     @Override

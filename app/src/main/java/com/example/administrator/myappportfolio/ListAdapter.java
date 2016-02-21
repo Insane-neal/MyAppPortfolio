@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016-02-20.
+ * Used as my app portfolio
  */
 public class ListAdapter extends BaseAdapter {
     Context context;
